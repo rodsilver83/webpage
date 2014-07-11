@@ -4,6 +4,23 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+<<<<<<< HEAD
+=======
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 100;
+
+  src: url('../fonts/Quicksand-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+
+  src: url('../fonts/Quicksand-Regular.otf') format('opentype');
+}
+>>>>>>> bab2cbd8d340e5511cf7b264c43c5dd335c2e0ae
 .btn-default,
 .btn-primary,
 .btn-success,
