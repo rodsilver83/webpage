@@ -1,5 +1,6 @@
 (function(){
   var page = angular.module('page',[]);
+
   page.controller('pageController',['$scope','$http',function($scope,$http) {
 
     this.left = 18;
@@ -25,5 +26,29 @@
       this.leftpointer =290;
       $.fn.fullpage.moveTo(0, 3);
     };
+    this.movepointer = function(position){
+      this.left = position;
+      this.leftpointer = position;
+    };
+
+
+
   }]);
+
+
+
 })();
+
+$(document).ready(function () {
+  $('#fullpage').fullpage({
+    verticalCentered: false,
+    resize: false,
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      console.log(slideIndex)
+      switch(slideIndex){
+        case 0:
+          break;
+      }
+    }
+  });
+});

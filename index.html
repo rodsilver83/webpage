@@ -14,15 +14,6 @@
   <script type="text/javascript" src="/lib/fullpage/vendors/jquery.slimscroll.min.js"></script>
   <script type="text/javascript" src="/lib/fullpage/jquery.fullPage.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#fullpage').fullpage({
-        verticalCentered: false,
-        resize: false
-      });
-    });
-  </script>
-
 </head>
 <body ng-controller="pageController as page">
   <div class="navbar navbar-default" role="navigation">
@@ -40,8 +31,7 @@
       </div>
 
       <div class="collapse navbar-collapse navbar-right">
-        <div class="menu-pointer-selected" style="margin-left: {{page.leftpointer}}px"
-             ng-init="leftpointer=18"></div>
+        <div class="menu-pointer-selected" style="margin-left: {{page.leftpointer}}px"></div>
         <div class="menu-pointer" style="margin-left: {{page.left}}px"></div>
         <ul class="nav navbar-nav" id="menu">
           <li class="active"><a ng-mousedown="page.home()" ng-mouseover="page.left=18" href="#home">Inicio</a></li>
