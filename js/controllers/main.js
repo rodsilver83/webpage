@@ -26,7 +26,8 @@
       this.leftpointer =290;
       $.fn.fullpage.moveTo(0, 3);
     };
-    this.movepointer = function(position){
+    $scope.movepointer = function(position){
+      console.log(position);
       this.left = position;
       this.leftpointer = position;
     };
@@ -47,6 +48,8 @@ $(document).ready(function () {
       console.log(slideIndex)
       switch(slideIndex){
         case 0:
+          angular.element(document.getElementById('pageController')).scope().movepointer(18);
+          angular.element(document.getElementById('pageController')).scope().$apply();
           break;
       }
     }
