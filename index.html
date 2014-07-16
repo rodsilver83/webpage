@@ -1,15 +1,25 @@
-<html>
+<!doctype html>
+<html ng-app="page">
 <head>
   <title>Rodrigo Soria - Full Stack Developer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+
+  <script src="js/angular.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/fullpage/jquery.fullPage.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/lib/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/lib/fullpage/vendors/jquery.slimscroll.min.js"></script>
+  <script type="text/javascript" src="/lib/fullpage/jquery.fullPage.js"></script>
+
 </head>
-<body>
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<body ng-controller="pageController as page" id="pageController">
+  <div class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
-          <img src="assets/img/adevices.png" height="70px" style="padding-top: 10px;">
+        <img src="assets/img/adevices.png" height="70px" style="padding-top: 10px;">
       </div>
       <div class="navbar-text">
         <a class="navbar-brand" href="#">
@@ -19,14 +29,92 @@
           </p>
         </a>
       </div>
+
+      <div class="collapse navbar-collapse navbar-right">
+        <div class="menu-pointer-selected" style="margin-left: {{page.leftpointer}}px"></div>
+        <div class="menu-pointer" style="margin-left: {{page.left}}px"></div>
+        <ul class="nav navbar-nav" id="menu">
+          <li class="active"><a ng-mousedown="page.home()" ng-mouseover="page.left=18" href="#home">Inicio</a></li>
+          <li class=""><a ng-mousedown="page.aboutme()" ng-mouseover="page.left=97" href="#aboutme">Sobre mi</a></li>
+          <li
+              class="active"><a ng-mousedown="page.projects()" ng-mouseover="page.left=192" href="#projects">Proyectos
+          </a></li>
+          <li
+              class=""><a ng-mousedown="page.contact()" ng-mouseover="page.left=290" href="#contact">Contacto
+          </a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="fullpage">
+    <div class="section" data-anchor="section1">
+      <div class="slide" data-anchor="slide1" id="slide1">
+        <div class="container slide-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="panel panel-primary">
+                <div class="panel-heading">Home</div>
+                <div class="panel-body">HOME</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide" data-anchor="slide2" id="slide2">
+        <div class="container slide-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="panel panel-danger">
+                <div class="panel-heading">Sobre mi</div>
+                <div class="panel-body">Ingeniero en cibernética y sistemas computacionales egresado de la universidad
+                  la salle, generación 2001 - 2005. He trabajo en varias áreas de Sistemas, como redes, arquitectura,
+                  seguridad encontrando mi pasión en el desarrollo web. Me encanta el diseño, el manejo de colores,
+                  usabilidad y tendencias que ofrece el diseño web, sin embargo no dejo de ser un geek que disfruta
+                  mucho codificando, resolviendo problemas, creando aplicaciones en su totalidad desde 0, el manejo de
+                  servidores, diseño de BD y la lógica de programación es lo mío. En 2009 encuentro en el desarrollo web
+                  el mejor entorno de trabajo para explotar mis dos pasiones, ejercitar ambos hemisferios del cerebro
+                  desde la parte lógica, lenguaje y razonamiento en el Back-End y disfrutar del color, imágenes,
+                  intuición y creatividad involucradas en el desarrollo del Front-End.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide" data-anchor="slide3" id="slide3">
+        <div class="container slide-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide" data-anchor="slide5" id="slide5">
+        <div class="container slide-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="panel panel-info">
+                <div class="panel-heading">Contacto</div>
+                <div class="panel-body">Contacto</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
     <div class="row"></div>
   </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/controllers/main.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
