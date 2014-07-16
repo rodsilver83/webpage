@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="page">
+<html ng-app="page" ng-controller="pageController as page" id="pageController" >
 <head>
   <title>Rodrigo Soria - Full Stack Developer</title>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
   <script type="text/javascript" src="/lib/fullpage/jquery.fullPage.js"></script>
 
 </head>
-<body ng-controller="pageController as page" id="pageController">
+<body>
   <div class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -31,17 +31,31 @@
       </div>
 
       <div class="collapse navbar-collapse navbar-right">
-        <div class="menu-pointer-selected" style="margin-left: {{page.leftpointer}}px"></div>
-        <div class="menu-pointer" style="margin-left: {{page.left}}px"></div>
+        <div class="menu-pointer-selected" ng-style="leftPointerStyle"></div>
+        <div class="menu-pointer" ng-style="leftStyle"></div>
         <ul class="nav navbar-nav" id="menu">
-          <li class="active"><a ng-mousedown="page.home()" ng-mouseover="page.left=18" href="#home">Inicio</a></li>
-          <li class=""><a ng-mousedown="page.aboutme()" ng-mouseover="page.left=97" href="#aboutme">Sobre mi</a></li>
-          <li
-              class="active"><a ng-mousedown="page.projects()" ng-mouseover="page.left=192" href="#projects">Proyectos
-          </a></li>
-          <li
-              class=""><a ng-mousedown="page.contact()" ng-mouseover="page.left=290" href="#contact">Contacto
-          </a></li>
+          <li class="active">
+            <a ng-click="page.home()" ng-mouseover="leftStyle={'margin-left':'18px'}" href="#home">
+              Inicio</a>
+          </li>
+          <li class="">
+            <a ng-click="page.aboutme()" ng-mouseover="leftStyle={'margin-left':'97px'}" href="#aboutme">
+              Sobre mi</a>
+          </li>
+          <li class="active">
+            <a ng-click="page.projects()" ng-mouseover="leftStyle={'margin-left':'192px'}" href="#projects">
+              Proyectos</a>
+          </li>
+          <li class="">
+            <a ng-click="page.contact()" ng-mouseover="leftStyle={'margin-left':'290px'}" href="#contact">
+              Contacto
+            </a>
+          </li>
+          <li class="active">
+            <a ng-click="page.blog()" ng-mouseover="leftStyle={'margin-left':'350px'}" href="#contact">
+              Blog
+            </a>
+          </li>
         </ul>
       </div>
 
