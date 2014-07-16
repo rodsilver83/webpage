@@ -3642,6 +3642,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li > a {
   margin-right: 2px;
   line-height: 1.42857143;
+  color: white;
+  background-color: #fc9050;
   border: 1px solid transparent;
   border-radius: 0 0 0 0;
 }

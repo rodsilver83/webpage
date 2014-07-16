@@ -490,7 +490,11 @@ a {
   -webkit-background-size: cover cover;
           background-size: cover;
 }
-#slide2,
+#slide2 {
+  background: url("/assets/img/BrainCompute_01.jpg");
+  -webkit-background-size: cover cover;
+          background-size: cover;
+}
 #slide4 {
   background: url("/assets/img/internet.jpg");
   -webkit-background-size: cover cover;
