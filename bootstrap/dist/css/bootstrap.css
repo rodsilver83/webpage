@@ -4,8 +4,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-<<<<<<< HEAD
-=======
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
@@ -20,7 +18,6 @@
 
   src: url('../fonts/Quicksand-Regular.otf') format('opentype');
 }
->>>>>>> bab2cbd8d340e5511cf7b264c43c5dd335c2e0ae
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1194,10 +1191,10 @@ a.text-warning:hover {
   color: #66512c;
 }
 .text-danger {
-  color: #a94442;
+  color: #a94d00;
 }
 a.text-danger:hover {
-  color: #843534;
+  color: #763600;
 }
 .bg-primary {
   color: #fff;
@@ -1225,10 +1222,10 @@ a.bg-warning:hover {
   background-color: #f7ecb5;
 }
 .bg-danger {
-  background-color: #f2dede;
+  background-color: #f2ac75;
 }
 a.bg-danger:hover {
-  background-color: #e4b9b9;
+  background-color: #ee9046;
 }
 .page-header {
   padding-bottom: 9px;
@@ -2252,14 +2249,14 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-  background-color: #f2dede;
+  background-color: #f2ac75;
 }
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc;
+  background-color: #f09e5e;
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
@@ -2624,25 +2621,25 @@ select[multiple].input-lg {
 .has-error .checkbox,
 .has-error .radio-inline,
 .has-error .checkbox-inline {
-  color: #a94442;
+  color: #a94d00;
 }
 .has-error .form-control {
-  border-color: #a94442;
+  border-color: #a94d00;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
 .has-error .form-control:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+  border-color: #763600;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ff7d10;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ff7d10;
 }
 .has-error .input-group-addon {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #a94442;
+  color: #a94d00;
+  background-color: #f2ac75;
+  border-color: #a94d00;
 }
 .has-error .form-control-feedback {
-  color: #a94442;
+  color: #a94d00;
 }
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
@@ -3786,7 +3783,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -3980,8 +3977,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -4111,6 +4108,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default {
   background-color: #2b51b2;
   border-color: #254597;
+  border-top: 3px solid #182e60;
 }
 .navbar-default .navbar-brand {
   font-weight: 100;
@@ -4129,13 +4127,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #fff;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
+  color: #fff;
   background-color: #254597;
 }
 .navbar-default .navbar-nav > .disabled > a,
@@ -4161,7 +4159,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
+  color: #fff;
   background-color: #254597;
 }
 @media (max-width: 767px) {
@@ -4170,13 +4168,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333;
+    color: #fff;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
+    color: #fff;
     background-color: #254597;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
@@ -4190,14 +4188,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #fff;
 }
 .navbar-default .navbar-link:hover {
-  color: #333;
+  color: #fff;
 }
 .navbar-default .btn-link {
   color: #fff;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #333;
+  color: #fff;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
@@ -4691,15 +4689,15 @@ a.thumbnail.active {
   color: #66512c;
 }
 .alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  color: #a94d00;
+  background-color: #f2ac75;
+  border-color: #f0865e;
 }
 .alert-danger hr {
-  border-top-color: #e4b9c0;
+  border-top-color: #ee7446;
 }
 .alert-danger .alert-link {
-  color: #843534;
+  color: #763600;
 }
 @-webkit-keyframes progress-bar-stripes {
   from {
@@ -4981,26 +4979,26 @@ a.list-group-item-warning.active:focus {
   border-color: #8a6d3b;
 }
 .list-group-item-danger {
-  color: #a94442;
-  background-color: #f2dede;
+  color: #a94d00;
+  background-color: #f2ac75;
 }
 a.list-group-item-danger {
-  color: #a94442;
+  color: #a94d00;
 }
 a.list-group-item-danger .list-group-item-heading {
   color: inherit;
 }
 a.list-group-item-danger:hover,
 a.list-group-item-danger:focus {
-  color: #a94442;
-  background-color: #ebcccc;
+  color: #a94d00;
+  background-color: #f09e5e;
 }
 a.list-group-item-danger.active,
 a.list-group-item-danger.active:hover,
 a.list-group-item-danger.active:focus {
   color: #fff;
-  background-color: #a94442;
-  border-color: #a94442;
+  background-color: #a94d00;
+  border-color: #a94d00;
 }
 .list-group-item-heading {
   margin-top: 0;
@@ -5301,22 +5299,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #faebcc;
 }
 .panel-danger {
-  border-color: #ebccd1;
+  border-color: #f0865e;
 }
 .panel-danger > .panel-heading {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  color: #a94d00;
+  background-color: #f2ac75;
+  border-color: #f0865e;
 }
 .panel-danger > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #ebccd1;
+  border-top-color: #f0865e;
 }
 .panel-danger > .panel-heading .badge {
-  color: #f2dede;
-  background-color: #a94442;
+  color: #f2ac75;
+  background-color: #a94d00;
 }
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #ebccd1;
+  border-bottom-color: #f0865e;
 }
 .embed-responsive {
   position: relative;

@@ -1,0 +1,69 @@
+
+a::-moz-focus-inner, a{
+  border: none;
+  outline: none;
+}
+
+.menu-pointer{
+  float: left;
+  position: absolute;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 15px 0 15px;
+  border-color: @navbar-default-border-top transparent transparent transparent;
+line-height: 0px;
+  opacity: 0.3;
+-webkit-transition: margin-left 1s;
+-moz-transition: margin-left 1s;
+-ms-transition: margin-left 1s;
+-o-transition: margin-left 1s;
+transition: margin-left 1s;
+_border-color: @navbar-default-border-top #000000 #000000 #000000;
+_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+.menu-pointer-selected{
+  float: left;
+  position: absolute;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 15px 0 15px;
+  border-color: @navbar-default-border-top transparent transparent transparent;
+  line-height: 0px;
+  -webkit-transition: margin-left 1s;
+  -moz-transition: margin-left 1s;
+  -ms-transition: margin-left 1s;
+  -o-transition: margin-left 1s;
+  transition: margin-left 1s;
+  _border-color: @navbar-default-border-top #000000 #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+#slide1, #slide3, #slide5{
+  background: url("/assets/img/code.jpg");
+  background-size: cover;
+}
+
+#slide2, #slide4{
+  background: url("/assets/img/internet.jpg");
+  background-size: cover;
+}
+
+.slide-container{
+  margin-top: 20px;
+}
+
+.panel-body{
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */
+
+}
