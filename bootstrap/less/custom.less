@@ -44,12 +44,12 @@ _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
 #slide1, #slide3, #slide5{
-  background: url("/assets/img/code.jpg");
+  background: url("/assets/img/orange.jpg");
   background-size: cover;
 }
 
 #slide2{
-  background: url("/assets/img/BrainCompute_01.jpg");
+  background: url("/assets/img/blue_bg.jpg");
   background-size: cover;
 }
 
@@ -71,4 +71,28 @@ _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
   background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */
 
+}
+
+.navbar-default{
+  transition: background-color 1s;
+}
+
+.navbar-orange{
+  background-color: #F35F1F;
+  border-color: darken(#F35F1F, 6.5%);
+  border-top: 3px solid #970F01;
+  transition: background-color 1s;
+}
+
+.navbar-orange .menu-pointer{
+  border-color: #970F01 transparent transparent;
+}
+
+.navbar-orange .menu-pointer-selected{
+  border-color: #970F01 transparent transparent;
+}
+
+.navbar-orange .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus{
+  background-color: #e9321f;
 }

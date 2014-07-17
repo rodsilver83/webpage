@@ -25,7 +25,7 @@
       $scope.movepointer(290,3);
     };
     this.blog = function(){
-      $scope.leftPointerStyle={'margin-left':'350px'}
+      $scope.leftPointerStyle={'margin-left':'367px'}
     };
     $scope.movepointer = function(position,index){
       console.log("P: "+position+" I: "+index);
