@@ -6,59 +6,57 @@
     $scope.leftStyle={'margin-left':'18px'};
     $scope.leftPointerStyle={'margin-left':'18px'};
 
-    var pageIndex = 0;
+    clickControl = true;
 
     $scope.home = function(){
+      clickControl = false;
       $scope.movepointer(18,0);
-      pageIndex = 0;
     };
     $scope.aboutme = function(){
-      $scope.leftPointerStyle={'margin-left':'97px'}
-      pageIndex = 1;
-      $.fn.fullpage.moveTo(0, 1);
+      clickControl = false;
+      $scope.movepointer(97,1);
     };
     $scope.projects = function(){
-      $scope.leftPointerStyle={'margin-left':'192px'}
-      pageIndex = 2;
-      $.fn.fullpage.moveTo(0, 2);
+      clickControl = false;
+      $scope.movepointer(192,2);
     };
     this.contact = function(){
-      $scope.leftPointerStyle={'margin-left':'290px'}
-      pageIndex = 3;
-      $.fn.fullpage.moveTo(0, 3);
+      clickControl = false;
+      $scope.movepointer(290,3);
     };
     this.blog = function(){
       $scope.leftPointerStyle={'margin-left':'350px'}
     };
     $scope.movepointer = function(position,index){
-      $scope.leftPointerStyle={'margin-left': position+'px'}
-      if(index >= 0){
+      console.log("P: "+position+" I: "+index);
+      if(index != -1){
+        $scope.leftPointerStyle={'margin-left': position+'px'};
+        $scope.leftStyle={'margin-left': position+'px'};
         $.fn.fullpage.moveTo(0, index);
-      }else {
-        $scope.$apply();
+        clickControl = true;
+        //$scope.$apply();
+      }else{
+        if(clickControl) {
+          $scope.leftPointerStyle = {'margin-left': position + 'px'};
+          $scope.$apply();
+          $timeout(function () {
+            $scope.leftStyle = {'margin-left': position + 'px'};
+            $scope.$apply();
+          }, 150);
+        }
+
       }
 
-      $timeout(function(){
-        $scope.leftStyle={'margin-left': position+'px'}
-        if(index >= 0){
-          $.fn.fullpage.moveTo(0, index);
-        }else {
-          $scope.$apply();
-        }
-      },100);
     };
   }]);
-
-
-
 })();
 
 $(document).ready(function () {
   $('#fullpage').fullpage({
     verticalCentered: false,
     resize: false,
+    loopHorizontal: false,
     onSlideLeave: function(anchorLink, index, slideIndex, direction){
-      console.log(direction);
       if(direction === 'left')
         slideIndex--;
       if(direction === 'right')
@@ -67,6 +65,7 @@ $(document).ready(function () {
         slideIndex = 3;
       if(slideIndex > 3)
         slideIndex = 0;
+      console.log("SI: "+slideIndex);
       switch(slideIndex){
         case 0:
           angular.element(document.getElementById('pageController')).scope().movepointer(18,-1);

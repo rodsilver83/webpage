@@ -67,7 +67,7 @@ html, body {
     height: 0;
     border-style: solid;
     margin-top: -38px;
-    display: none;
+    display: none !important;
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
