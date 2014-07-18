@@ -545,4 +545,7 @@ a {
 .navbar-default .navbar-nav > .active > a:focus {
   background-color: #e9321f;
 }
+.panel-body {
+  text-align: justify;
+}
 /*# sourceMappingURL=bootstrap-theme.css.map */

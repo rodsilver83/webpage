@@ -31,8 +31,8 @@
     };
     $scope.contact = function(){
       clickControl = false;
-      borderColor = "#005B06";
-      $scope.navbarStyle = {'background-color':'#007A08','border-top':'3px solid #005B06','border-color':'#005B06'};
+      borderColor = "#004F03";
+      $scope.navbarStyle = {'background-color':'#007A08','border-top':'3px solid #004F03','border-color':'#004F03'};
       $scope.movepointer(290,3);
     };
     $scope.blog = function(){
