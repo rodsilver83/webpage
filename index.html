@@ -16,7 +16,7 @@
 
 </head>
 <body>
-  <div class="navbar navbar-default navbar-orange" role="navigation">
+  <div class="navbar navbar-default navbar-orange" role="navigation" ng-style="navbarStyle">
     <div class="container">
       <div class="navbar-header">
         <img src="assets/img/adevices.png" height="70px" style="padding-top: 10px;">
@@ -34,7 +34,7 @@
         <div class="menu-pointer-selected" ng-style="leftPointerStyle"></div>
         <div class="menu-pointer" ng-style="leftStyle"></div>
         <ul class="nav navbar-nav" id="menu">
-          <li class="active">
+          <li class="">
             <a ng-click="home()" ng-mouseover="leftStyle={'margin-left':'18px'}" href="#">
               Inicio</a>
           </li>
@@ -42,17 +42,17 @@
             <a ng-click="aboutme()" ng-mouseover="leftStyle={'margin-left':'97px'}" href="#">
               Sobre mi</a>
           </li>
-          <li class="active">
+          <li class="">
             <a ng-click="projects()" ng-mouseover="leftStyle={'margin-left':'192px'}" href="#">
               Proyectos</a>
           </li>
           <li class="">
-            <a ng-click="page.contact()" ng-mouseover="leftStyle={'margin-left':'290px'}" href="#">
+            <a ng-click="contact()" ng-mouseover="leftStyle={'margin-left':'290px'}" href="#">
               Contacto
             </a>
           </li>
-          <li class="active">
-            <a ng-click="page.blog()" ng-mouseover="leftStyle={'margin-left':'367px'}" href="#">
+          <li class="">
+            <a ng-click="blog()" ng-mouseover="leftStyle={'margin-left':'367px'}" href="#">
               Blog
             </a>
           </li>
@@ -79,8 +79,8 @@
       <div class="slide" data-anchor="slide2" id="slide2">
         <div class="container slide-container">
           <div class="row">
-            <div class="col-xs-12">
-              <div class="panel panel-danger">
+            <div class="col-xs-6">
+              <div class="panel panel-primary">
                 <div class="panel-heading">Sobre mi</div>
                 <div class="panel-body">Ingeniero en cibernética y sistemas computacionales egresado de la universidad
                   la salle, generación 2001 - 2005. He trabajo en varias áreas de Sistemas, como redes, arquitectura,
@@ -113,8 +113,14 @@
       <div class="slide" data-anchor="slide5" id="slide5">
         <div class="container slide-container">
           <div class="row">
-            <div class="col-xs-12">
-              <div class="panel panel-info">
+            <div class="col-xs-6">
+              <div class="panel panel-success">
+                <div class="panel-heading">Contacto</div>
+                <div class="panel-body">Contacto</div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="panel panel-success">
                 <div class="panel-heading">Contacto</div>
                 <div class="panel-body">Contacto</div>
               </div>

@@ -43,18 +43,28 @@ _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
-#slide1, #slide3, #slide5{
+#slide1{
   background: url("/assets/img/orange.jpg");
   background-size: cover;
 }
 
-#slide2{
+#slide3{
   background: url("/assets/img/blue_bg.jpg");
+  background-size: cover;
+}
+
+#slide2{
+  background: url("/assets/img/black_bg.jpg");
   background-size: cover;
 }
 
 #slide4{
   background: url("/assets/img/internet.jpg");
+  background-size: cover;
+}
+
+#slide5{
+  background: url("/assets/img/green_bg.jpg");
   background-size: cover;
 }
 
@@ -85,11 +95,13 @@ _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
 .navbar-orange .menu-pointer{
-  border-color: #970F01 transparent transparent;
+  border-color: #222222 transparent transparent;
+  z-index: 99;
 }
 
 .navbar-orange .menu-pointer-selected{
   border-color: #970F01 transparent transparent;
+  z-index: 9999;
 }
 
 .navbar-orange .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
