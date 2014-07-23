@@ -23,7 +23,7 @@
       </div>
       <div class="navbar-text">
         <a class="navbar-brand" href="/" ng-click="page.home()">
-          <p>
+          <p style="font-family: 'Quicksand'">
             <b>Rodrigo Soria</b><br>
             Full Stack Developer
           </p>
@@ -43,16 +43,16 @@
               Sobre mi</a>
           </li>
           <li class="">
-            <a ng-click="projects()" ng-mouseover="leftStyle={'margin-left':'192px'}" href="#">
-              Proyectos</a>
+            <a ng-click="projects()" ng-mouseover="leftStyle={'margin-left':'170px'}" href="#">
+              CV</a>
           </li>
           <li class="">
-            <a ng-click="contact()" ng-mouseover="leftStyle={'margin-left':'290px'}" href="#">
+            <a ng-click="contact()" ng-mouseover="leftStyle={'margin-left':'243px'}" href="#">
               Contacto
             </a>
           </li>
           <li class="">
-            <a ng-click="blog()" ng-mouseover="leftStyle={'margin-left':'367px'}" href="#">
+            <a ng-click="blog()" ng-mouseover="leftStyle={'margin-left':'320px'}" href="#">
               Blog
             </a>
           </li>
@@ -67,7 +67,7 @@
       <div class="slide" data-anchor="slide1" id="slide1">
         <div class="container slide-container">
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-3">
               <div class="row">
                 <!--
                 <div class="col-xs-6">
@@ -86,16 +86,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-6">
-              <div class="panel panel-danger">
-                <div class="panel-heading">Mis Tecnologias Web Favoritas</div>
-                <div class="panel-body">
-                  <p style="color: #000000; font-size: 30px;">
-                    Compass, Sass, Less, Bootstrap, Javascript, HTML 5, CSS 3, Jquery, Node.js, MongoDb, Php, MySql,
-                    Apache, Nginx, Git, Google Analytics, Google Web Master Tools
-                  </p>
-                </div>
-              </div>
+            <div class="col-xs-9">
+              <h1 style="font-size: 70px; color: #ffffff;">Full Stack<br>Web Developer</h1>
+              <p style="color: #000000; font-size: 60px; text-align: left; font-weight: bold;">
+                Compass, Sass, Less, Bootstrap, Javascript, AngularJs, HTML 5, CSS 3, Jquery, Node.js, MongoDb, Php,
+                MySql,
+                Apache, Nginx, Git, Google Analytics, Google Web Master Tools
+              </p>
             </div>
           </div>
         </div>
@@ -104,19 +101,14 @@
         <div class="container slide-container">
           <div class="row">
             <div class="col-xs-4">
-              <div class="panel panel-primary">
-                <div class="panel-heading">Sobre mi</div>
-                <div class="panel-body">Ingeniero en cibernética y sistemas computacionales egresado de la universidad
-                  la salle, generación 2001 - 2005. He trabajo en varias áreas de Sistemas, como redes, arquitectura,
+              <p style="font-size: 25px; line-height: 1.2; color: white; font-family: 'Quicksand'">
+                  He trabajo en varias áreas de Sistemas, como redes, arquitectura,
                   seguridad encontrando mi pasión en el desarrollo web. Me encanta el diseño, el manejo de colores,
                   usabilidad y tendencias que ofrece el diseño web, sin embargo no dejo de ser un geek que disfruta
-                  mucho codificando, resolviendo problemas, creando aplicaciones en su totalidad desde 0, el manejo de
+                  mucho codificando, resolviendo problemas, creando aplicaciones en su totalidad, el manejo de
                   servidores, diseño de BD y la lógica de programación es lo mío. En 2009 encuentro en el desarrollo web
-                  el mejor entorno de trabajo para explotar mis dos pasiones, ejercitar ambos hemisferios del cerebro
-                  desde la parte lógica, lenguaje y razonamiento en el Back-End y disfrutar del color, imágenes,
-                  intuición y creatividad involucradas en el desarrollo del Front-End.
-                </div>
-              </div>
+                  el mejor entorno de trabajo para explotar mis dos pasiones, Back-End y Front-End.
+              </p>
             </div>
             <div class="col-xs-3 col-xs-offset-3">
               <img src="assets/img/rod_bw.jpg" class="img-circle" style="margin-top: 20px">
@@ -128,11 +120,32 @@
         <div class="container slide-container">
           <div class="row">
             <div class="col-xs-12">
-              <ul class="nav nav-tabs" role="tablist">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+              <ul class="nav nav-tabs" role="tablist" ng-init="tab = 1">
+                <li ng-class="{ active:tab === 1}"><a href="#" ng-click="tab = 1">Experiencia</a></li>
+                <li ng-class="{ active:tab === 2}"><a href="#" ng-click="tab = 2">Cursos</a></li>
+                <li ng-class="{ active:tab === 3}"><a href="#" ng-click="tab = 3">Estudios</a>
+                </li>
               </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12" ng-show="tab === 1">
+              <br>
+              <p style="color: white; font-family: 'Quicksand';">Experiencia</p>
+            </div>
+            <div class="col-xs-12" ng-show="tab === 2">
+              <br>
+              <p style="color: white; font-family: 'Quicksand';">Cursos</p>
+            </div>
+            <div class="col-xs-12" ng-show="tab === 3">
+              <br>
+              <p style="color: white; font-family: 'Quicksand';">
+                Ingeniero en cibernética y sistemas
+                computacionales egresado
+                de la
+                universidad
+                la salle, generación 2001 - 2005.
+              </p>
             </div>
           </div>
         </div>
@@ -140,13 +153,13 @@
       <div class="slide" data-anchor="slide5" id="slide5">
         <div class="container slide-container">
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-9">
               <div class="panel panel-success">
                 <div class="panel-heading">Contacto</div>
                 <div class="panel-body">Contacto</div>
               </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-3">
               <div class="panel panel-success">
                 <div class="panel-heading">Contacto</div>
                 <div class="panel-body">Contacto</div>
