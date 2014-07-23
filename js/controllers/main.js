@@ -106,10 +106,10 @@ $(document).ready(function () {
           angular.element(document.getElementById('pageController')).scope().movepointer(97,-1);
           break;
         case 2:
-          angular.element(document.getElementById('pageController')).scope().movepointer(192,-1);
+          angular.element(document.getElementById('pageController')).scope().movepointer(170,-1);
           break;
         case 3:
-          angular.element(document.getElementById('pageController')).scope().movepointer(290,-1);
+          angular.element(document.getElementById('pageController')).scope().movepointer(243,-1);
           break;
       }
     }
