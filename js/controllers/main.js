@@ -27,16 +27,19 @@
       clickControl = false;
       borderColor = "#143170";
       $scope.navbarStyle = {'background-color':'#204EB2','border-top':'3px solid #143170','border-color':'#143170'};
-      $scope.movepointer(192,2);
+      $scope.movepointer(170,2);
     };
     $scope.contact = function(){
       clickControl = false;
       borderColor = "#004F03";
       $scope.navbarStyle = {'background-color':'#007A08','border-top':'3px solid #004F03','border-color':'#004F03'};
-      $scope.movepointer(290,3);
+      $scope.movepointer(243,3);
     };
     $scope.blog = function(){
-      $scope.leftPointerStyle={'margin-left':'367px'}
+      clickControl = false;
+      borderColor = "#004f03";
+      $scope.navbarStyle = {'background-color':'#007a08','border-top':'3px solid #004f03','border-color':'#004f03'};
+      $scope.movepointer(320,4);
     };
     $scope.movepointer = function(position,index){
       if(index != -1){
@@ -57,11 +60,11 @@
               borderColor = "#000000";
               $scope.navbarStyle = {'background-color':'#333333','border-top':'3px solid #000000','border-color':'#000000'};
               break;
-            case 192:
+            case 170:
               borderColor = "#143170";
               $scope.navbarStyle = {'background-color':'#204EB2','border-top':'3px solid #143170','border-color':'#143170'};
               break;
-            case 290:
+            case 243:
               borderColor = "#005B06";
               $scope.navbarStyle = {'background-color':'#007A08','border-top':'3px solid #005B06','border-color':'#005B06'};
               break;
@@ -103,10 +106,10 @@ $(document).ready(function () {
           angular.element(document.getElementById('pageController')).scope().movepointer(97,-1);
           break;
         case 2:
-          angular.element(document.getElementById('pageController')).scope().movepointer(192,-1);
+          angular.element(document.getElementById('pageController')).scope().movepointer(170,-1);
           break;
         case 3:
-          angular.element(document.getElementById('pageController')).scope().movepointer(290,-1);
+          angular.element(document.getElementById('pageController')).scope().movepointer(243,-1);
           break;
       }
     }
