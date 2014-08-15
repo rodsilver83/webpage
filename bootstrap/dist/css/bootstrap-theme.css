@@ -490,9 +490,7 @@ a {
   background-color: #fff;
 }
 #slide2 {
-  background: url("/assets/img/black_bg.jpg");
-  -webkit-background-size: cover cover;
-          background-size: cover;
+  background-color: #fff;
 }
 #slide4 {
   background-color: #fff;
@@ -572,5 +570,15 @@ p {
   -webkit-transition: all .3s;
        -o-transition: all .3s;
           transition: all .3s;
+}
+.photo {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+.slide-container {
+  height: 80%;
+  overflow: auto;
 }
 /*# sourceMappingURL=bootstrap-theme.css.map */
