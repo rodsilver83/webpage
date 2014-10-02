@@ -1,0 +1,94 @@
+
+@transitiontime: 0.5s;
+@cellX: 10.5%;
+@cellY: 10.5%;
+@cellx: 2%;
+@celly: 2%;
+
+@cellx2: 4%;
+@celly2: 4%;
+@celly4: 13%;
+
+@cellblockx: 4.5%;
+@cellblocky: 4.5%;
+
+body{
+  background: #000000;
+  height: 100vh;
+}
+
+.navbar-black{
+  background: #000000;
+}
+
+.navbar-black a{
+  color: #ffffff;
+}
+
+.container-fluid{
+  height: 100%;
+}
+
+.grid-container{
+  height: 100%;
+}
+.red-box{
+  background: #FF5755;
+}
+.blue-box{
+  background: #7BBEEA;
+}
+.green-box{
+  background: #7BEAD7;
+}
+.yellow-box{
+  background: #FFDF66;
+}
+
+.cell-block{
+  width: @cellblockx;
+  height: @cellblocky;
+  margin: 0;
+  border-radius: 0px;
+  position: absolute;
+  .transition(all @transitiontime ease 0s);
+}
+
+.cellxy{
+  width: @cellx;
+  height: @celly;
+  .transition(all @transitiontime ease 0s);
+}
+
+.cellXy{
+  width: @cellX;
+  height: @celly;
+  .transition(all @transitiontime ease 0s);
+}
+
+.cellxY{
+  width: @cellx;
+  height: @cellY;
+  .transition(all @transitiontime ease 0s);
+}
+.cellXY{
+  width: @cellX;
+  height: @cellY;
+  .transition(all @transitiontime ease 0s);
+}
+/*SECOND LEVEL*/
+.cellx2y{
+  width: @cellx2;
+  height: @celly;
+  .transition(all @transitiontime ease 0s);
+}
+.cellxy2{
+  width: @cellx;
+  height: @celly2;
+  .transition(all @transitiontime ease 0s);
+}
+.cellxy4{
+  width: @cellx;
+  height: @celly4;
+  .transition(all @transitiontime ease 0s);
+}
