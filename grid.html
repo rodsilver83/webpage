@@ -18,7 +18,7 @@
       </div>
       <div class="navbar-text">
         <a class="navbar-brand" href="/">
-          <p style="font-family: 'Quicksand'">
+          <p style="font-family: 'Quicksand'; font-size: 25px">
             <b>Rodrigo Soria</b><br>
             Full Stack Developer
           </p>
@@ -30,6 +30,7 @@
     <div class="col-xs-12 grid-container">
       <div class="cell-block {{box.class}} {{box.status}}" ng-repeat="box in boxes"
            ng-mouseover="zoomBox(box)" ng-mouseout="zoomOut(box)" style="left: {{box.L}}%; top: {{box.T}}%">
+        <p>{{box.text}}</p>
       </div>
     </div>
   </div>
