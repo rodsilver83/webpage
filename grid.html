@@ -11,26 +11,28 @@
   <script src="js/controllers/grid.js"></script>
 </head>
 <body ng-app="page" ng-controller="gridController">
-  <div class="navbar navbar-black" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <img src="assets/img/adevices_tp.png" height="70px" style="padding-top: 10px;">
-      </div>
-      <div class="navbar-text">
-        <a class="navbar-brand" href="/">
-          <p style="font-family: 'Quicksand'; font-size: 25px">
-            <b>Rodrigo Soria</b><br>
-            Full Stack Developer
-          </p>
-        </a>
+  <div class="container">
+    <div class="navbar navbar-black" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <img src="assets/img/adevices_tp.png" height="70px" style="padding-top: 10px;">
+        </div>
+        <div class="navbar-text">
+          <a class="navbar-brand" href="/">
+            <p style="font-family: 'Quicksand'; font-size: 25px">
+              <b>Rodrigo Soria</b><br>
+              Full Stack Developer
+            </p>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid" style="height:{{containerheight}}px">
-    <div class="col-xs-12 grid-container">
-      <div class="cell-block {{box.class}} {{box.status}}" ng-repeat="box in boxes"
-           ng-mouseover="zoomBox(box)" ng-mouseout="zoomOut(box)" style="left: {{box.L}}%; top: {{box.T}}%">
-        <p>{{box.text}}</p>
+    <div class="container-fluid" style="height:{{containerheight}}px">
+      <div class="col-xs-12 grid-container">
+        <div class="cell-block {{box.class}} {{box.status}}" ng-repeat="box in boxes"
+             ng-mouseover="zoomBox(box)" ng-mouseout="zoomOut(box)" style="left: {{box.L}}%; top: {{box.T}}%">
+          <p>{{box.text}}</p>
+        </div>
       </div>
     </div>
   </div>
