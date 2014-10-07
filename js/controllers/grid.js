@@ -6,6 +6,7 @@
     $scope.gridHeight = 20;
     $scope.containerheight = window.innerHeight - 180;
     $scope.boxes = [];
+    $scope.openBox = false;
 
     for(var i=0; i<$scope.gridWidth; i++) {
       for(var j=0; j<$scope.gridWidth; j++) {
@@ -15,101 +16,80 @@
       }
     }
 
-    //githubLogo();
+    $scope.showBox = function(box){
+      $scope.openBox = true;
+      if(box.X > 0 && box.Y > 0 && box.X < ($scope.gridWidth-1) && box.Y < ($scope.gridHeight-1)) {
+      }
 
-    function githubLogo(){
-      $scope.boxes[(0 * $scope.gridWidth) + 7].class = 'black-box';
-      $scope.boxes[(0 * $scope.gridWidth) + 8].class = 'black-box';
-      $scope.boxes[(0 * $scope.gridWidth) + 9].class = 'black-box';
-      $scope.boxes[(0 * $scope.gridWidth) + 10].class = 'black-box';
-      $scope.boxes[(0 * $scope.gridWidth) + 11].class = 'black-box';
-      $scope.boxes[(0 * $scope.gridWidth) + 12].class = 'black-box';
+      /*SECOND LEVEL*/
+      if(box.X > 1 && box.Y > 1 && box.X < ($scope.gridWidth-2) && box.Y < ($scope.gridHeight-2)) {
+        //FIRSTLEVEL
+        $scope.boxes[((box.X) * $scope.gridWidth) + (box.Y)].status = 'showBox';
+        $scope.boxes[((box.X) * $scope.gridWidth) + (box.Y)].T = 5;
+        $scope.boxes[((box.X) * $scope.gridWidth) + (box.Y)].L = 5;
+      }
+    }
 
-      $scope.boxes[(1 * $scope.gridWidth) + 5].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 6].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 7].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 8].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 9].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 10].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 11].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 12].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 13].class = 'black-box';
-      $scope.boxes[(1 * $scope.gridWidth) + 14].class = 'black-box';
+    //logo();
 
-      $scope.boxes[(2 * $scope.gridWidth) + 4].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 5].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 6].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 7].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 8].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 9].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 10].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 11].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 12].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 13].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 14].class = 'black-box';
-      $scope.boxes[(2 * $scope.gridWidth) + 15].class = 'black-box';
+    function logo(){
+      for(var i= 1; i<$scope.gridWidth-1; i++){
+        $scope.boxes[(i * $scope.gridWidth) + 1].class += ' black-box';
+        $scope.boxes[(1 * $scope.gridWidth) + i].class += ' black-box';
+        $scope.boxes[(($scope.gridHeight-2) * $scope.gridWidth) + i].class += ' black-box';
+        $scope.boxes[(i * $scope.gridWidth) + ($scope.gridHeight-2)].class += ' black-box';
+      }
 
-      $scope.boxes[(3 * $scope.gridWidth) + 3].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 4].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 5].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 6].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 7].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 8].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 9].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 10].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 11].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 12].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 13].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 14].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 15].class = 'black-box';
-      $scope.boxes[(3 * $scope.gridWidth) + 16].class = 'black-box';
+      for(var i= 3; i<17; i++) {
+        $scope.boxes[(i * $scope.gridWidth) + 3].class += ' black-box';
+      }
+      for(var i= 3; i<9; i++) {
+        $scope.boxes[(3 * $scope.gridWidth) + i].class += ' black-box';
+      }
+      for(var i= 4; i<9; i++) {
+        $scope.boxes[(i * $scope.gridWidth) + 9].class += ' black-box';
+      }
+      for(var i= 3; i<9; i++) {
+        $scope.boxes[(9 * $scope.gridWidth) + i].class += ' black-box';
+      }
+        $scope.boxes[(10 * $scope.gridWidth) + 6].class += ' black-box';
+        $scope.boxes[(10 * $scope.gridWidth) + 7].class += ' black-box';
+        $scope.boxes[(11 * $scope.gridWidth) + 7].class += ' black-box';
+        $scope.boxes[(11 * $scope.gridWidth) + 8].class += ' black-box';
+        $scope.boxes[(12 * $scope.gridWidth) + 8].class += ' black-box';
+        $scope.boxes[(13 * $scope.gridWidth) + 8].class += ' black-box';
+        $scope.boxes[(13 * $scope.gridWidth) + 9].class += ' black-box';
+        $scope.boxes[(14 * $scope.gridWidth) + 9].class += ' black-box';
+        $scope.boxes[(15 * $scope.gridWidth) + 9].class += ' black-box';
+        $scope.boxes[(16 * $scope.gridWidth) + 9].class += ' black-box';
 
-      $scope.boxes[(4 * $scope.gridWidth) + 2].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 3].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 4].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 6].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 7].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 8].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 9].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 10].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 11].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 12].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 13].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 14].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 16].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 17].class = 'black-box';
-      $scope.boxes[(4 * $scope.gridWidth) + 18].class = 'black-box';
-
-      $scope.boxes[(5 * $scope.gridWidth) + 1].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 2].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 3].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 4].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 16].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 17].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 18].class = 'black-box';
-      $scope.boxes[(5 * $scope.gridWidth) + 19].class = 'black-box';
-
-      $scope.boxes[(6 * $scope.gridWidth) + 1].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 2].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 3].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 4].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 16].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 17].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 18].class = 'black-box';
-      $scope.boxes[(6 * $scope.gridWidth) + 19].class = 'black-box';
-
-      $scope.boxes[(7 * $scope.gridWidth) + 1].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 2].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 3].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 4].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 16].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 17].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 18].class = 'black-box';
-      $scope.boxes[(7 * $scope.gridWidth) + 19].class = 'black-box';
-
-
-
-
+        $scope.boxes[(3 * $scope.gridWidth) + 12].class += ' black-box';
+        $scope.boxes[(3 * $scope.gridWidth) + 13].class += ' black-box';
+        $scope.boxes[(3 * $scope.gridWidth) + 14].class += ' black-box';
+        $scope.boxes[(3 * $scope.gridWidth) + 15].class += ' black-box';
+        $scope.boxes[(4 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(4 * $scope.gridWidth) + 11].class += ' black-box';
+        $scope.boxes[(5 * $scope.gridWidth) + 11].class += ' black-box';
+        $scope.boxes[(6 * $scope.gridWidth) + 11].class += ' black-box';
+        $scope.boxes[(7 * $scope.gridWidth) + 11].class += ' black-box';
+        $scope.boxes[(8 * $scope.gridWidth) + 11].class += ' black-box';
+        $scope.boxes[(9 * $scope.gridWidth) + 12].class += ' black-box';
+        $scope.boxes[(9 * $scope.gridWidth) + 13].class += ' black-box';
+        $scope.boxes[(9 * $scope.gridWidth) + 14].class += ' black-box';
+        $scope.boxes[(9 * $scope.gridWidth) + 15].class += ' black-box';
+        $scope.boxes[(10 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(11 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(12 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(13 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(14 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(15 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(16 * $scope.gridWidth) + 12].class += ' black-box';
+        $scope.boxes[(16 * $scope.gridWidth) + 13].class += ' black-box';
+        $scope.boxes[(16 * $scope.gridWidth) + 14].class += ' black-box';
+        $scope.boxes[(16 * $scope.gridWidth) + 15].class += ' black-box';
+        $scope.boxes[(15 * $scope.gridWidth) + 11].class += ' black-box';
+        $scope.boxes[(5 * $scope.gridWidth) + 16].class += ' black-box';
+        $scope.boxes[(14 * $scope.gridWidth) + 11].class += ' black-box';
 
 
     }
@@ -242,6 +222,7 @@
     }
 
     $scope.zoomOut = function(box){
+
       if(box.X > 0 && box.Y > 0 && box.X < ($scope.gridWidth-1) && box.Y < ($scope.gridHeight-1)) {
         $scope.boxes[((box.X - 1) * $scope.gridWidth) + (box.Y - 1)].status = 'cell';
 
@@ -305,9 +286,16 @@
         $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y + 1)].L -= 3;
         $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y + 1)].T += 3;
 
-        $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].status = 'cell';
-        $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].T += 3;
-        $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].L += 3;
+        if($scope.openBox){
+          $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].status = 'cell';
+          $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].T = box.X*5;
+          $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].L = box.Y*5;
+          $scope.openBox = false;
+        }else {
+          $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].status = 'cell';
+          $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].T += 3;
+          $scope.boxes[((box.X    ) * $scope.gridWidth) + (box.Y    )].L += 3;
+        }
         //SECOND LEVEL
         $scope.boxes[((box.X - 2) * $scope.gridWidth) + (box.Y - 2)].status = 'cell';
 

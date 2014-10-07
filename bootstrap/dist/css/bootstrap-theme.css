@@ -592,7 +592,7 @@ body {
   background: #998BEC;
 }
 .black-box {
-  background: #333333;
+  opacity: 0.2;
 }
 .cell-block {
   width: 4.5%;
@@ -704,5 +704,17 @@ body {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+}
+.showBox {
+  width: 89.5%;
+  height: 89.50%;
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.showBox > p {
+  opacity: 1;
 }
 /*# sourceMappingURL=bootstrap-theme.css.map */
