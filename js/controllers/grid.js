@@ -356,7 +356,18 @@
       }
     }
 
-  }]);
+  }]).directive("pageContent",function(){
+    return {
+      restrict: 'E',
+      scope: {
+        box: '='
+      },
+      template: '<div>{{box}}</div>',
+      link: function(scope,element,attrs){
+        console.log("BOX:", scope.box);
+      }
+    }
+  });
 
   function boxColor() {
     var random = Math.floor((Math.random() * 100) % 9 +1);
