@@ -547,6 +547,11 @@ p {
   height: 80%;
   overflow: auto;
 }
+*,
+p,
+p {
+  font-family: 'Quicksand';
+}
 body {
   background: #000000;
   height: 100vh;
@@ -688,18 +693,19 @@ body {
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.cell-block > p {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.65);
+.cell-block .page-container {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 40px;
   height: 100%;
   opacity: 0;
   padding-top: 9%;
+  display: block;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.cellX2Y2 > p {
+.cellX2Y2 .page-container {
   opacity: 1;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -708,13 +714,20 @@ body {
 .showBox {
   width: 89.5%;
   height: 89.50%;
-  z-index: 100;
+  z-index: 9999;
   opacity: 1;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.showBox > p {
+.showBox .page-container {
   opacity: 1;
+  padding-top: 2%;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+page-content {
+  height: 100%;
 }
 /*# sourceMappingURL=bootstrap-theme.css.map */

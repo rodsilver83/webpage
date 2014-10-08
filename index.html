@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <link href="bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/controllers/grid.js"></script>
 </head>
@@ -29,10 +28,11 @@
     </div>
     <div class="container-fluid" style="height:{{containerheight}}px">
       <div class="col-xs-12 grid-container">
-        <div ng-click="showBox(box)" class="cell-block {{box.class}} {{box.status}}" ng-repeat="box in boxes"
-             ng-mouseover="zoomBox(box)" ng-mouseout="zoomOut(box)" style="left: {{box.L}}%; top: {{box.T}}%">
-          <p>{{box.text}}</p>
-          <page-content box="box"></page-content>
+        <div ng-click="showBox(box)" ng-mouseout="zoomOut(box)" class="cell-block {{box.class}} {{box.status}}" ng-repeat="box in boxes"
+             ng-mouseover="zoomBox(box)" style="left: {{box.L}}%; top: {{box.T}}%">
+          <div class="page-container">
+            <page-content></page-content>
+          </div>
         </div>
       </div>
     </div>
