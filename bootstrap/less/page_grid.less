@@ -83,6 +83,63 @@ body {
   opacity: 0.2;
 }
 
+.cell-block .page-container {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  height: 100%;
+  opacity: 0;
+  padding-top: 9%;
+  display: block;
+  .transition(all @transitiontime ease 0s);
+}
+
+.cellX2Y2 .page-container {
+  opacity: 1;
+  .transition(all @transitiontime ease 0s);
+}
+
+.showBox .page-container {
+  opacity: 1;
+  padding-top: 2%;
+  .transition(all @transitiontime ease 0s);
+}
+
+.page-content {
+  height: 90%;
+  opacity: 0;
+  padding: 0 40px;
+  font-size: 17px;
+  text-align: justify;
+  overflow: auto;
+  .transition(all 0s ease 0s);
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.showBox .page-content {
+  opacity: 1;
+  overflow: auto;
+  .transition(all @transitiontime ease 0.6s);
+}
+
+.logo {
+  float: left;
+  height: 70px;
+}
+
+.navbar-brand {
+  float: left;
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 25px;
+  font-family: 'Quicksand';
+}
+
 @media (min-width: 768px) {
   .cell-block {
     width: @cellblockx;
@@ -166,72 +223,14 @@ body {
     .transition(all @transitiontime ease 0s);
   }
 
-}
+  .showBox {
+    width: 89.5%;
+    height: 89.50%;
+    z-index: 9999;
+    opacity: 1;
+    .transition(all @transitiontime ease 0s);
+  }
 
-
-.cell-block .page-container {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 30px;
-  height: 100%;
-  opacity: 0;
-  padding-top: 9%;
-  display: block;
-  .transition(all @transitiontime ease 0s);
-}
-
-.cellX2Y2 .page-container {
-  opacity: 1;
-  .transition(all @transitiontime ease 0s);
-}
-
-.showBox {
-  width: 89.5%;
-  height: 89.50%;
-  z-index: 9999;
-  opacity: 1;
-  .transition(all @transitiontime ease 0s);
-}
-
-.showBox .page-container {
-  opacity: 1;
-  padding-top: 2%;
-  .transition(all @transitiontime ease 0s);
-}
-
-.page-content {
-  height: 90%;
-  opacity: 0;
-  padding: 0 40px;
-  font-size: 17px;
-  text-align: justify;
-  overflow: auto;
-  .transition(all 0s ease 0s);
-}
-
-.page-title {
-  font-size: 24px;
-  font-weight: bolder;
-}
-
-.showBox .page-content {
-  opacity: 1;
-  overflow: auto;
-  .transition(all @transitiontime ease 0.6s);
-}
-
-.logo {
-  float: left;
-  height: 70px;
-}
-
-.navbar-brand {
-  float: left;
-  margin: 0;
-  padding-top: 30px;
-  padding-left: 30px;
-  font-size: 25px;
-  font-family: 'Quicksand';
 }
 
 @media (max-width: 768px) {
@@ -326,6 +325,14 @@ body {
   .cellX2Y2 {
     width: (4*@cellX2);
     height: (4*@cellY2);
+    .transition(all @transitiontime ease 0s);
+  }
+
+  .showBox {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 1;
     .transition(all @transitiontime ease 0s);
   }
 }
