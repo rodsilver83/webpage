@@ -1,5 +1,6 @@
 (function(){
   var page = angular.module('page',[]);
+  var randomSet = Math.floor((Math.random() * 100) % 2 +1);
 
   page.controller('gridController',['$scope',function($scope) {
     $scope.gridWidth = 20;
@@ -425,45 +426,54 @@
     var random = Math.floor((Math.random() * 100) % 4 +1);
     var classS = '';
     var text = '';
-    switch (random) {
+
+    switch(randomSet){
       case 1:
-        classS = 'red-box';
-          text = 'aboutMe';
+        switch (random) {
+          case 1:
+            classS = 'dark-blue-box';
+              text = 'aboutMe';
+            break;
+          case 2:
+            classS = 'green-box';
+              text = 'skills';
+            break;
+          case 3:
+            classS = 'blue-box';
+              text = 'Experience';
+            break;
+          case 4:
+            classS = 'purple-box';
+              text = 'CV';
+            break;
+        }
         break;
       case 2:
-        classS = 'green-box';
-          text = 'skills';
+        switch (random) {
+          case 1:
+            classS = 'yellow-box';
+            text = 'aboutMe';
+            break;
+          case 2:
+            classS = 'red-box';
+            text = 'skills';
+            break;
+          case 3:
+            classS = 'dark-yellow-box';
+            text = 'Experience';
+            break;
+          /*
+           case 4:
+           classS = 'dark-green-box';
+           text = 'PINO';
+           break;
+           */
+          case 4:
+            classS = 'dark-red-box';
+            text = 'CV';
+            break;
+        }
         break;
-      case 3:
-        classS = 'blue-box';
-          text = 'Experience';
-        break;
-      case 4:
-        classS = 'purple-box';
-          text = 'CV';
-        break;
-      /*
-       case 2:
-       classS = 'yellow-box';
-       text = 'Amarillo';
-       break;
-      case 5:
-        classS = 'dark-blue-box';
-        text = 'MARINO';
-        break;
-      case 6:
-        classS = 'dark-yellow-box';
-        text = 'ORO';
-        break;
-      case 7:
-        classS = 'dark-green-box';
-        text = 'PINO';
-        break;
-      case 8:
-        classS = 'dark-red-box';
-        text = 'VINO';
-        break;
-      */
     }
     return {classS: classS,text: text};
   }
