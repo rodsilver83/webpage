@@ -105,21 +105,6 @@ body {
   .transition(all @transitiontime ease 0s);
 }
 
-.page-content {
-  height: 90%;
-  opacity: 0;
-  padding: 0 40px;
-  font-size: 17px;
-  text-align: justify;
-  overflow: auto;
-  .transition(all 0s ease 0s);
-}
-
-.page-title {
-  font-size: 24px;
-  font-weight: bolder;
-}
-
 .showBox .page-content {
   opacity: 1;
   overflow: auto;
@@ -141,6 +126,20 @@ body {
 }
 
 @media (min-width: 768px) {
+  .page-title {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  .page-content {
+    height: 90%;
+    opacity: 0;
+    padding: 0 40px;
+    font-size: 17px;
+    text-align: justify;
+    overflow: auto;
+    .transition(all 0s ease 0s);
+  }
+
   .cell-block {
     width: @cellblockx;
     height: @cellblocky;
@@ -234,6 +233,19 @@ body {
 }
 
 @media (max-width: 768px) {
+  .page-title {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  .page-content {
+    height: 80%;
+    opacity: 0;
+    padding: 0 10px;
+    font-size: 10px;
+    text-align: left;
+    overflow: auto;
+    .transition(all 0s ease 0s);
+  }
   .logo {
     height: 40px;
     float: left;

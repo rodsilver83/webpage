@@ -658,21 +658,6 @@ body {
        -o-transition: all .5s ease 0s;
           transition: all .5s ease 0s;
 }
-.page-content {
-  height: 90%;
-  padding: 0 40px;
-  overflow: auto;
-  font-size: 17px;
-  text-align: justify;
-  opacity: 0;
-  -webkit-transition: all 0s ease 0s;
-       -o-transition: all 0s ease 0s;
-          transition: all 0s ease 0s;
-}
-.page-title {
-  font-size: 24px;
-  font-weight: bolder;
-}
 .showBox .page-content {
   overflow: auto;
   opacity: 1;
@@ -693,6 +678,21 @@ body {
   font-size: 25px;
 }
 @media (min-width: 768px) {
+  .page-title {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  .page-content {
+    height: 90%;
+    padding: 0 40px;
+    overflow: auto;
+    font-size: 17px;
+    text-align: justify;
+    opacity: 0;
+    -webkit-transition: all 0s ease 0s;
+         -o-transition: all 0s ease 0s;
+            transition: all 0s ease 0s;
+  }
   .cell-block {
     position: absolute;
     width: 4.5%;
@@ -798,6 +798,21 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .page-title {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  .page-content {
+    height: 80%;
+    padding: 0 10px;
+    overflow: auto;
+    font-size: 10px;
+    text-align: left;
+    opacity: 0;
+    -webkit-transition: all 0s ease 0s;
+         -o-transition: all 0s ease 0s;
+            transition: all 0s ease 0s;
+  }
   .logo {
     float: left;
     height: 40px;
