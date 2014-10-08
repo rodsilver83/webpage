@@ -382,7 +382,10 @@
         var templateLoader,
           baseUrl = '/',
           templateMap = {
-            aboutMe: 'aboutMe.html'
+            aboutMe: 'aboutMe.html',
+            Experience: 'experience.html',
+            skills: 'skills.html',
+            CV: 'cv.html'
           };
 
         if(templateMap[contentType])
@@ -419,7 +422,7 @@
 
 
   function boxColor() {
-    var random = Math.floor((Math.random() * 100) % 9 +1);
+    var random = Math.floor((Math.random() * 100) % 4 +1);
     var classS = '';
     var text = '';
     switch (random) {
@@ -428,37 +431,39 @@
           text = 'aboutMe';
         break;
       case 2:
-        classS = 'yellow-box';
-          text = 'Amarillo';
+        classS = 'green-box';
+          text = 'skills';
         break;
       case 3:
-        classS = 'green-box';
-          text = 'VERDE';
+        classS = 'blue-box';
+          text = 'Experience';
         break;
       case 4:
-        classS = 'blue-box';
-          text = 'AZUL';
+        classS = 'purple-box';
+          text = 'CV';
         break;
+      /*
+       case 2:
+       classS = 'yellow-box';
+       text = 'Amarillo';
+       break;
       case 5:
         classS = 'dark-blue-box';
-          text = 'MARINO';
+        text = 'MARINO';
         break;
       case 6:
         classS = 'dark-yellow-box';
-          text = 'ORO';
+        text = 'ORO';
         break;
       case 7:
         classS = 'dark-green-box';
-          text = 'PINO';
+        text = 'PINO';
         break;
       case 8:
         classS = 'dark-red-box';
-          text = 'VINO';
+        text = 'VINO';
         break;
-      case 9:
-        classS = 'purple-box';
-          text = 'MORADO';
-        break;
+      */
     }
     return {classS: classS,text: text};
   }
