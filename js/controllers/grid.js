@@ -20,12 +20,15 @@
     if($scope.mobile){
       $scope.gridWidth = 5;
       $scope.gridHeight = 5;
+      var widthScale = 20;
+    }else{
+      var widthScale = 5;
     }
 
     for(var i=0; i<$scope.gridWidth; i++) {
       for(var j=0; j<$scope.gridWidth; j++) {
         var boxcolor = boxColor();
-        var box = {X: i, Y:j, class: boxcolor.classS,text: boxcolor.text, status: 'cell', T: i*5, L: j*5};
+        var box = {X: i, Y:j, class: boxcolor.classS,text: boxcolor.text, status: 'cell', T: i*widthScale, L: j*widthScale};
         $scope.boxes.push(box);
       }
     }
