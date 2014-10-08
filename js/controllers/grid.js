@@ -9,6 +9,8 @@
     $scope.boxes = [];
     $scope.bigBox = false;
     $scope.openBox = false;
+    $scope.navigator = navigator;
+
 
     for(var i=0; i<$scope.gridWidth; i++) {
       for(var j=0; j<$scope.gridWidth; j++) {
