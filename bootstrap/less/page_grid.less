@@ -193,3 +193,32 @@ body{
   overflow: auto;
   .transition(all @transitiontime ease 0.6s);
 }
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+    float: left;
+  }
+
+  .navbar-brand {
+    font-size: 10px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-top: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo{
+    float: left;
+    height: 70px;
+  }
+  .navbar-brand{
+    float: left;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-size: 25px;
+    font-family: 'Quicksand';
+  }
+}
