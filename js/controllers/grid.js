@@ -248,7 +248,6 @@
 
     $scope.zoomBox = function(box){
       if($scope.bigBox != box) {
-        $scope.bigBox = false;
         if (box.X > 0 && box.Y > 0 && box.X < ($scope.gridWidth - 1) && box.Y < ($scope.gridHeight - 1)) {
           $scope.boxes[((box.X - 1) * $scope.gridWidth) + (box.Y - 1)].status = 'cellxy';
 
@@ -376,19 +375,48 @@
       }
     }
 
-  }]).directive("pageContent",function(){
-    return {
-      restrict: 'E',
-      scope: {
-        box: '='
-      },
-      templateUrl: pageTemplates
-    }
-  });
+  }]).directive("pageContent",['$compile', '$http', '$templateCache',
+    function($compile,$http,$templateCache){
 
-  function pageTemplates(tElement, tAttrs){
-    return 'template.html';
-  }
+      var getTemplate = function(contentType) {
+        var templateLoader,
+          baseUrl = '/',
+          templateMap = {
+            aboutMe: 'aboutMe.html'
+          };
+
+        if(templateMap[contentType])
+          var templateUrl = baseUrl + templateMap[contentType];
+        else
+          var templateUrl = baseUrl + 'template.html';
+        templateLoader = $http.get(templateUrl, {cache: $templateCache});
+
+        return templateLoader;
+
+      }
+
+      var linker = function(scope, element, attrs) {
+
+        var loader = getTemplate(scope.type);
+
+        var promise = loader.success(function(html) {
+          element.html(html);
+        }).then(function (response) {
+          element.replaceWith($compile(element.html())(scope));
+        });
+      }
+
+      return {
+        restrict: 'E',
+        scope: {
+          type: '='
+        },
+        link: linker
+
+      }
+  }]);
+
+
 
   function boxColor() {
     var random = Math.floor((Math.random() * 100) % 9 +1);
@@ -397,7 +425,7 @@
     switch (random) {
       case 1:
         classS = 'red-box';
-          text = 'ABOUT ME';
+          text = 'aboutMe';
         break;
       case 2:
         classS = 'yellow-box';

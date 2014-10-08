@@ -31,7 +31,7 @@
         <div ng-click="showBox(box)" ng-mouseout="zoomOut(box)" class="cell-block {{box.class}} {{box.status}}" ng-repeat="box in boxes"
              ng-mouseover="zoomBox(box)" style="left: {{box.L}}%; top: {{box.T}}%">
           <div class="page-container">
-            <page-content></page-content>
+            <page-content type="box.text"></page-content>
           </div>
         </div>
       </div>
