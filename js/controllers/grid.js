@@ -1,8 +1,9 @@
 (function () {
   var page = angular.module('page', []);
-  var randomSet = Math.floor((Math.random() * 100) % 2 + 1);
+  //var randomSet = Math.floor((Math.random() * 100) % 2 + 1);
+  var randomSet = 1;
 
-  page.controller('gridController', ['$scope', function ($scope) {
+  page.controller('gridController', ['$scope','$window', function ($scope,$window) {
     $scope.gridWidth = 20;
     $scope.gridHeight = 20;
     $scope.containerheight = window.innerHeight - 180;
@@ -10,6 +11,12 @@
     $scope.bigBox = false;
     $scope.openBox = false;
     $scope.mobile = mobileCheck();
+
+    $scope.$watch(function(){
+      return $window.innerWidth;
+    }, function(value) {
+      console.log(value);
+    });
 
     function mobileCheck() {
       var check = false;
